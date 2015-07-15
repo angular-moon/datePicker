@@ -5,11 +5,5 @@
     "main": "WdatePicker.js",
     "dependencies": [
         "jquery"
-    ],
-    "shim": {
-        "WdatePicker.js": {
-            "deps": ["jquery"],
-            "exports": "'window.datePicker'"
-        }
-    }
+    ]
 }
