@@ -1,0 +1,15 @@
+{
+    "version": "4.8.0",
+    "description": "日期时间选择器",
+    "name": "datePicker",
+    "main": "WdatePicker.js",
+    "dependencies": [
+        "jquery"
+    ],
+    "shim": {
+        "WdatePicker.js": {
+            "deps": ["jquery"],
+            "exports": "'window.datePicker'"
+        }
+    }
+}
