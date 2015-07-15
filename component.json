@@ -2,7 +2,7 @@
     "version": "4.8.0",
     "description": "日期时间选择器",
     "name": "datePicker",
-    "main": "WdatePicker.js",
+    "main": "datePicker.js",
     "dependencies": [
         "jquery"
     ]
