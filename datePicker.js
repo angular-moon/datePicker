@@ -2,8 +2,8 @@
  * My97 DatePicker 4.8 Beta4
  * License: http://www.my97.net/dp/license.asp
  */
- //@require skin/WdatePicker.css
-define(["jquery"], function(jQuery) {
+
+define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
     window.__triggerChange__ = function(T) {
         $(T.el || T).trigger('change');
     };

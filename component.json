@@ -4,6 +4,7 @@
     "name": "datePicker",
     "main": "datePicker.js",
     "dependencies": [
-        "jquery"
+        "jquery",
+        "css"
     ]
 }
