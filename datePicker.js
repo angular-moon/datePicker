@@ -114,7 +114,7 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
                 $dp = $dp || {}
             }
             var A = {win: Y,$: function($) {
-                    return (typeof $ == "string") ? Y[N].getElementById($) : $
+                    return (typeof $ == "string") ? Y[N].getElementById($) || top[N].getElementById($) : $
                 },$D: function($, _) {
                     return this.$DV(this.$($).value, _)
                 },$DV: function(_, $) {
@@ -470,7 +470,7 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
                     return;
                 if (D != J.srcEl && (P(D) == "none" || D.type == "hidden"))
                     D = J.srcEl;
-                var I = W(D), $ = F(Y), E = M(V), B = b(V), G = $dp.dd.offsetHeight, A = $dp.dd.offsetWidth;
+                var I = W(D), $ = F(J.srcEl.ownerDocument == Y.document ? Y : top), E = M(V), B = b(V), G = $dp.dd.offsetHeight, A = $dp.dd.offsetWidth;
                 if (isNaN(C))
                     C = 0;
                 if (($.topM + I.bottom + G > E.height) && ($.topM + I.top - G > 0))
@@ -491,8 +491,10 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
     })()
 
     //修复在iframe中弹出blockUI到父窗口和angularjs配合使用ngModel不能刷新的问题.
-    if(top != self)
-        top.WdatePicker = WdatePicker;
+    if(top != self){
+        top.WdatePicker = window.datePicker;
+        top.$dp = $dp;
+    }
 
     return window.datePicker;
 });
