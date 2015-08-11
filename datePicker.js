@@ -376,7 +376,7 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
                     }
                     return null
                 }
-                return event
+                return event || top.event;
             }
         }
         function R(_, $) {
@@ -489,6 +489,11 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
             }
         }
     })()
+
+    //修复在iframe中弹出blockUI到父窗口和angularjs配合使用ngModel不能刷新的问题.
+    if(top != self)
+        top.WdatePicker = WdatePicker;
+
     return window.datePicker;
 });
 
