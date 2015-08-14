@@ -447,13 +447,13 @@ define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
                     var _ = J.getRealLang();
                     K.lang = _.name;
                     K.skin = J.skin;
-                    var $ = ["<head><script>", "", "var doc=document, $d, $dp, $cfg=doc.cfg, $pdp = parent.$dp, $dt, $tdt, $sdt, $lastInput, $IE=$pdp.ie, $FF = $pdp.ff,$OPERA=$pdp.opera, $ny, $cMark = false;", "if($cfg.eCont){$dp = {};for(var p in $pdp)$dp[p]=$pdp[p];}else{$dp=$pdp;};for(var p in $cfg){$dp[p]=$cfg[p];}", "doc.oncontextmenu=function(){try{$c._fillQS(!$dp.has.d,1);showB($d.qsDivSel);}catch(e){};return false;};", "</script><script src=", __uri("datePicker/lang/zh-cn.js"), " charset=", _.charset, "></script>"];
+                    var $ = ["<head><script>", "", "var doc=document, $d, $dp, $cfg=doc.cfg, $pdp = parent.$dp, $dt, $tdt, $sdt, $lastInput, $IE=$pdp.ie, $FF = $pdp.ff,$OPERA=$pdp.opera, $ny, $cMark = false;", "if($cfg.eCont){$dp = {};for(var p in $pdp)$dp[p]=$pdp[p];}else{$dp=$pdp;};for(var p in $cfg){$dp[p]=$cfg[p];}", "doc.oncontextmenu=function(){try{$c._fillQS(!$dp.has.d,1);showB($d.qsDivSel);}catch(e){};return false;};", "</script><script src=", __uri("lang/zh-cn.js"), " charset=", _.charset, "></script>"];
                     if (F)
                         $[1] = "document.domain=\"" + I + "\";";
                     for (var C = 0; C < D.length; C++)
                         if (D[C].name == J.skin)
-                            $.push("<link rel=\"stylesheet\" type=\"text/css\" href=\""+__uri("datePicker/skin/ext/datepicker.css")+"\" charset=\"" + D[C].charset + "\"/>");
-                    $.push("<script src=\""+__uri("datePicker/calendar.js")+"\"></script>");
+                            $.push("<link rel=\"stylesheet\" type=\"text/css\" href=\""+__uri("skin/ext/datepicker.css")+"\" charset=\"" + D[C].charset + "\"/>");
+                    $.push("<script src=\""+__uri("calendar.js")+"\"></script>");
                     $.push("</head><body leftmargin=\"0\" topmargin=\"0\" tabindex=0></body></html>");
                     $.push("<script>var t;t=t||setInterval(function(){if(doc.ready){new My97DP();$cfg.onload();$c.autoSize();$cfg.setPos($dp);clearInterval(t);}},20);</script>");
                     J.setPos = B;
