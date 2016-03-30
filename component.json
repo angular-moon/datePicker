@@ -1,5 +1,5 @@
 {
-    "version": "4.8.2",
+    "version": "4.8.3",
     "description": "日期时间选择器",
     "name": "datePicker",
     "main": "datePicker.js",
