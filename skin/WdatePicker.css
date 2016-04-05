@@ -1,5 +1,5 @@
 .Wdate{
-	background:#fff url(datePicker.gif) no-repeat 2%;
+	background:#fff url(datePicker.gif) no-repeat 5px;
 	padding-left: 30px !important;
 }
 .Wdate::-ms-clear{display:none;}
