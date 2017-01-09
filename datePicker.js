@@ -3,7 +3,7 @@
  * License: http://www.my97.net/dp/license.asp
  */
 
-define(["jquery", "css!skin/WdatePicker.css"], function(jQuery) {
+define(["jquery", "skin/WdatePicker.css"], function(jQuery) {
     window.__triggerChange__ = function(T) {
         $(T.el || T).trigger('change');
     };
